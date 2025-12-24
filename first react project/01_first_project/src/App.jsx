@@ -1,35 +1,146 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="logo">MY LOGO</div>
+        <ul className="nav-links">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <div className="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+      <div className="container">
+        {/* Card 1 */}
+        <div className="child1">
+          <img
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+            alt="Coding"
+            className="card-img"
+          />
+          <div className="card-content">
+            <h3>Web Development</h3>
+            <p>Learn how to build modern websites using React and CSS.</p>
+            <button onClick={() => setCount(count + 1)}>
+              Click Me ({count})
+            </button>
+          </div>
+        </div>
+        <div className="child1">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+            alt="Workspace"
+            className="card-img"
+          />
+          <div className="card-content">
+            <h3>UI/UX Design</h3>
+            <p>Master the art of designing user interfaces that users love.</p>
+            <button onClick={() => setCount(count + 1)}>
+              Click Me ({count})
+            </button>
+          </div>
+        </div>
+
+        <div className="child1">
+          <img
+            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+            alt="Laptop"
+            className="card-img"
+          />
+          <div className="card-content">
+            <h3>Backend Logic</h3>
+            <p>Connect databases and create powerful APIs for your apps.</p>
+            <button onClick={() => setCount(count + 1)}>
+              Click Me ({count})
+            </button>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <h2 style={{ textAlign: "center", marginTop: "40px" }}>
+        Featured Collection
+      </h2>
+      <div className="cards">
+        <div className="card">
+          <img
+            src="https://images.unsplash.com/photo-1635805737707-575885ab0820?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BpZGVybWFufGVufDB8fDB8fHww"
+            alt="Spiderman"
+          />
+          <p className="card-title">Spiderman</p>
+        </div>
+
+        <div className="card">
+          <img
+            src="https://th.bing.com/th/id/OIP.GNu7a_QZFsrGFNTdyekuPgHaFj?w=186&h=140&c=7&r=0&o=7&cb=ucfimg2&dpr=1.4&pid=1.7&rm=3&ucfimg=1"
+            alt="Villain"
+          />
+          <p className="card-title">wonder woman</p>
+        </div>
+
+        <div className="card scoreboard">5 - 0</div>
+        <div className="card">
+          <img
+            src="https://img.republicworld.com/all_images/a-still-from-avengers-doomsday-leaked-teaser-1766122393024-16_9.webp"
+            alt="Doomsday"
+          />
+          <p className="card-title">captain america</p>
+        </div>
+
+        <div className="card">
+          <img
+            src="https://tse3.mm.bing.net/th/id/OIP.z6QjOd-AGO1RCj5tSAvb3QHaNH?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Suit"
+          />
+          <p className="card-title">Iron Man</p>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <div className="calculator">
+        <div className="txt">7744</div>
+        
+        <button className="lightgreynumbtn">C</button>
+        <button className="lightgreynumbtn">+/-</button>
+        <button className="lightgreynumbtn">%</button>
+        <button className="yellownumbtn">÷</button>
+        
+        <button className="greynumbtn">7</button>
+        <button className="greynumbtn">8</button>
+        <button className="greynumbtn">9</button>
+        <button className="yellownumbtn">X</button>
+        
+        <button className="greynumbtn">4</button>
+        <button className="greynumbtn">5</button>
+        <button className="greynumbtn">6</button>
+        <button className="yellownumbtn">-</button>
+        
+        <button className="greynumbtn">1</button>
+        <button className="greynumbtn">2</button>
+        <button className="greynumbtn">3</button>
+        <button className="yellownumbtn">+</button>
+      
+        <button className="bigbtn">0</button>
+        <button className="greynumbtn">.</button>
+        <button className="yellownumbtn">=</button>
+      </div>
+
+      
     </>
-  )
+  );
 }
 
-export default App
+export default App;

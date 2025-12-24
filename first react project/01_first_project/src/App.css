@@ -1,42 +1,243 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #111;
+  color: white;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  font-size: 20px;
+  font-weight: bold;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #00ffd5;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
   }
+
+  .hamburger {
+    display: flex;
+  }
+}
+.container {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.child1 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.child1:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.child1 h3 {
+  color: #333;
+}
+
+.child1 p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.child1 button {
+  padding: 10px;
+  background-color: #00ffd5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #111;
+}
+
+.child1 button:hover {
+  background-color: #00ccaa;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 50px;
 }
 
 .card {
-  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f0f0f0;
 }
 
-.read-the-docs {
-  color: #888;
+.card img {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+}
+
+.card-title {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: #fff;
+  width: 100%;
+  border-top: 1px solid #ddd;
+}
+
+.card.scoreboard {
+  border: none;
+  background: transparent;
+  justify-content: center;
+  font-size: 4rem;
+  /* Big font */
+  font-weight: 900;
+  font-family: 'Impact', sans-serif;
+  /* Strong font */
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+
+  .container,
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.calculator {
+  background-color: black;
+  width: 350px;
+  margin: 50px auto;
+  border-radius: 30px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.txt {
+  grid-column: span 4;
+  color: white;
+  font-size: 80px;
+  text-align: right;
+  padding: 20px 10px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.calculator button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.calculator button:active {
+  filter: brightness(1.3);
+}
+
+.lightgreynumbtn {
+  background-color: #a5a5a5;
+  color: black;
+  font-weight: 500;
+}
+
+.yellownumbtn {
+  background-color: #ff9f0a;
+  color: white;
+  font-weight: 500;
+}
+
+.greynumbtn {
+  background-color: #333333;
+  color: white;
+}
+
+.calculator .bigbtn {
+  grid-column: span 2;
+  width: 100%;
+  background-color: #333333;
+  color: white;
+  border-radius: 35px;
+  text-align: left;
+  padding-left: 30px;
 }
