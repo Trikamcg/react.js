@@ -112,33 +112,69 @@ function App() {
 
       <div className="calculator">
         <div className="txt">7744</div>
-        
+
         <button className="lightgreynumbtn">C</button>
         <button className="lightgreynumbtn">+/-</button>
         <button className="lightgreynumbtn">%</button>
         <button className="yellownumbtn">÷</button>
-        
+
         <button className="greynumbtn">7</button>
         <button className="greynumbtn">8</button>
         <button className="greynumbtn">9</button>
         <button className="yellownumbtn">X</button>
-        
+
         <button className="greynumbtn">4</button>
         <button className="greynumbtn">5</button>
         <button className="greynumbtn">6</button>
         <button className="yellownumbtn">-</button>
-        
+
         <button className="greynumbtn">1</button>
         <button className="greynumbtn">2</button>
         <button className="greynumbtn">3</button>
         <button className="yellownumbtn">+</button>
-      
+
         <button className="bigbtn">0</button>
         <button className="greynumbtn">.</button>
         <button className="yellownumbtn">=</button>
       </div>
 
-      
+      <section class="image-grid">
+        <img
+          src="https://img.youtube.com/vi/UiMg566PREA/maxresdefault.jpg"
+          alt=""
+          class="img1"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1766488735864-44c313801587?w=600&auto=format&fit=crop&q=60"
+          alt=""
+          class="img2"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1765790859163-53e82c11775a?w=600&auto=format&fit=crop&q=60"
+          alt=""
+          class="img3"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1765211003001-b9eb5cbfe1f3?w=600&auto=format&fit=crop&q=60"
+          alt=""
+          class="img4"
+        />
+        <img
+          src="https://plus.unsplash.com/premium_photo-1765352863139-5252070c327d?w=600&auto=format&fit=crop&q=60"
+          alt=""
+          class="img5"
+        />
+        <img
+          src="https://plus.unsplash.com/premium_photo-1766340004237-2f136e502218?w=600&auto=format&fit=crop&q=60"
+          alt=""
+          class="img6"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1766355583257-680e48b7189c?w=600&auto=format&fit=crop&q=60"
+          alt=""
+          class="img7"
+        />
+      </section>
     </>
   );
 }
